@@ -5,15 +5,16 @@ License GPL : http://www.gnu.org/copyleft/gpl.html
 
 ## Summary :
 
-Keyboard Led Monitor is a free software able to monitor the use of computer resources thanks to the leds of the keyboard (num lock, caps lock, scroll lock). The monitoring looks like the battery status bar of a mobile phone. Monitoring of CPU level, network traffic, memory  and swap usage, and battery level are supported. The software can be used with game modes also (knight rider, bounce, etc.).
+Keyboard Led Monitor is a free software able to monitor the use of computer resources thanks to the leds of the keyboard (num lock, caps lock, scroll lock). The monitoring looks like the battery status bar of a mobile phone. Monitoring of CPU level, network traffic, memory  and swap usage are supported. The software can be used with game modes also (knight rider, bounce, etc.).
 
 ## Development Status :
 
-I write this software first to monitor the battery level because I wanted to see it without to go on the deskbar. After discussions with some friends, I add some others monitors and game modes inspired from the software bl.
+Stopped, but open to new ideas ;)
 
 ## Thanks :
 
-Thanks to Greg Hankins and Ed Doolittle for the blinkenlights program which inspired me.
+Thanks to Greg Hankins and Ed Doolittle for the blinkenlights program that inspired me.</br>
+Thanks to Nick Aschenbach for the morse mode and some code refactoring.
 
 ## Installation :
 
