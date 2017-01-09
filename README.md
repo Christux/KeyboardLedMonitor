@@ -27,21 +27,19 @@ Install the daemon manually.
 ## Usage :
 
 klm [-DCMSkRblrchw] [-N interface] <device>
--D 	run on the background (needed for daemon)
--C 	monitor the CPU level
--N
-	monitor the network traffic
--M 	monitor the memory level
--S 	monitor the swap level
--k 	K2000 design mode
--R 	random design mode
--b 	bounce design mode
--l
-	left design mode
--r 	right design mode
--c 	center design mode
--h 	prints out this message
--w 	prints out warranty
+-D 	run on the background (needed for daemon)</br>
+-C 	monitor the CPU level</br>
+-N 	monitor the network traffic</br>
+-M 	monitor the memory level</br>
+-S 	monitor the swap level</br>
+-k 	K2000 design mode</br>
+-R 	random design mode</br>
+-b 	bounce design mode</br>
+-l	left design mode</br>
+-r 	right design mode</br>
+-c 	center design mode</br>
+-h 	prints out this message</br>
+-w 	prints out warranty</br>
 <device> /dev/tty1, /dev/tty2, ...
 
 ## Examples :
