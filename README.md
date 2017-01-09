@@ -5,9 +5,7 @@ License GPL : http://www.gnu.org/copyleft/gpl.html
 
 ## Summary :
 
-Keyboard Led Monitor is a free software which can monitor the utilization of resources with the leds of the keyboard (num lock, caps lock, scroll lock). The monitoring looks like the battery status bar of a mobile phone. Monitoring of CPU level, network traffic, memory  and swap usage, and battery level are supported. The software can be used with game modes also, like the program bl.
-
-Battery monitoring is only activated if the AC adapter is plugged out, another monitor (or game mode) can be used when the battery is not in use. There is a security option which turns off the computer if the battery level < 4 %. Be very careful with this option, it runs a "/usr/sbin/halt" so the computer will chut down with no saving of your works !! A last point, ACPI support by kernel is required for battery monitoring.
+Keyboard Led Monitor is a free software able to monitor the use of computer resources thanks to the leds of the keyboard (num lock, caps lock, scroll lock). The monitoring looks like the battery status bar of a mobile phone. Monitoring of CPU level, network traffic, memory  and swap usage, and battery level are supported. The software can be used with game modes also (knight rider, bounce, etc.).
 
 ## Development Status :
 
@@ -27,11 +25,8 @@ Install the daemon manually.
 
 ## Usage :
 
-klm [-DBsCMSkRblrchw] [-N interface] <device>
+klm [-DCMSkRblrchw] [-N interface] <device>
 -D 	run on the background (needed for daemon)
--B 	monitor the battery level (acpi is needed)
--s
-	security (turn off the computer when the battery level < 4 %)
 -C 	monitor the CPU level
 -N
 	monitor the network traffic
@@ -51,14 +46,9 @@ klm [-DBsCMSkRblrchw] [-N interface] <device>
 ## Examples :
 
 '''
-klm -D -B -k /dev/tty1
+klm -D -k /dev/tty1
 '''
-The program will work in background, if you are connected to a AC adapter, the K2000 mode will run, in the other case, the battery will be monitored.
-
-'''
-klm -D -B /dev/tty1
-'''
-The program will work in background, if you are not connected to a AC adapter the battery will be monitored.
+The program works in background, the knight rider is running.
 
 '''
 klm -C /dev/tty1
@@ -72,14 +62,14 @@ Monitoring network traffic.
 
 NB : You need root rights to access the leds. Better use :
 '''
-sudo klm [-DBsCMSkRblrchw] [-N interface] <device>
+sudo klm [-DsCMSkRblrchw] [-N interface] <device>
 '''
 
 ## Daemon :
 
 To configure the daemon (for Debian), edit the file /etc/init.d/klm.
-You will see default options are "-D -C /dev/tty1", it is the monitoring of the CPU. You can modify the device or add a mode like this : "-D -B -s -k /dev/tty3". After modification, restart the daemon : "/etc/init.d/klm restart".
+You will see default options are "-D -C /dev/tty1", it is the monitoring of the CPU. You can modify the device or add a mode like this : "-D -k /dev/tty3". After modification, restart the daemon : "/etc/init.d/klm restart".
 
 ## Keyboard Leds order :
 
-The default leds order is (left to right) : num lock - caps lock - scroll lock.  If your keyboard is different, it is my case, download the sources and edit klm.c . At the beginning the leds order is defined, you can modifie it here. 
+The default leds order is (left to right) : num lock - caps lock - scroll lock.  If your keyboard is different, you can edit "klm.h". The leds order is defined at the beginning of the file. 
