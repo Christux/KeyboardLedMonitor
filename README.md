@@ -46,25 +46,25 @@ klm [-DCMSkRblrchw] [-N interface] <device>
 
 ## Examples :
 
-'''
+```
 klm -D -k /dev/tty1
-'''
+```
 The program works in background, the knight rider is running.
 
-'''
+```
 klm -C /dev/tty1
-'''
+```
 Monitoring CPU.
 
-'''
+```
 klm -N eth0 /dev/tty1
-'''
+```
 Monitoring network traffic.
 
 NB : You need root rights to access the leds. Better use :
-'''
+```
 sudo klm [-DsCMSkRblrchw] [-N interface] <device>
-'''
+```
 
 ## Daemon :
 
