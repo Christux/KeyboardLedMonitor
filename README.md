@@ -26,7 +26,7 @@ Install the daemon manually.
 
 ## Usage :
 
-klm [-DCMSkRblrchw] [-N interface] <device>
+klm [-DCMSkRblrchw] [-N interface] <device></br>
 -D 	run on the background (needed for daemon)</br>
 -C 	monitor the CPU level</br>
 -N 	monitor the network traffic</br>
@@ -47,7 +47,7 @@ klm [-DCMSkRblrchw] [-N interface] <device>
 ```
 klm -D -k /dev/tty1
 ```
-The program works in background, the knight rider is running.
+The program works in background, the knight rider mode is running.
 
 ```
 klm -C /dev/tty1
