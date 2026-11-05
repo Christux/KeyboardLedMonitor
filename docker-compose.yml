@@ -1,0 +1,12 @@
+services:
+  keyboard-led-monitor:
+    image: keyboard-led-monitor:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: keyboard-led-monitor
+    restart: unless-stopped
+    pull_policy: build
+    devices:
+      - /dev/tty0:/dev/tty0
+    privileged: true

@@ -1,4 +1,4 @@
-FROM alpine AS builder
+FROM alpine:3.18 AS builder
 
 LABEL autodelete="true"
 
@@ -12,10 +12,10 @@ COPY Makefile .
 
 RUN make klm
 
-FROM alpine
+FROM alpine:3.18
 
 WORKDIR /usr/sbin
 
 COPY --from=builder /usr/src/app/klm ./klm
 
-CMD ["./klm", "-k", "/dev/tty1"]
+CMD ["./klm", "-k", "/dev/tty0"]
